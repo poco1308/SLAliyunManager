@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SLAliyunManager_Example' do
+  pod 'SLAliyunManager', :path => '../'
+
+  target 'SLAliyunManager_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
