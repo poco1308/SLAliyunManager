@@ -1,0 +1,16 @@
+PODS:
+  - SLAliyunManager (0.1.0)
+
+DEPENDENCIES:
+  - SLAliyunManager (from `../`)
+
+EXTERNAL SOURCES:
+  SLAliyunManager:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SLAliyunManager: 812b0eb94d2e26a73b8c63948337c670a91ab08d
+
+PODFILE CHECKSUM: 6fdfb98ad7104d75b02a82b984298216d467dbf3
+
+COCOAPODS: 1.3.1

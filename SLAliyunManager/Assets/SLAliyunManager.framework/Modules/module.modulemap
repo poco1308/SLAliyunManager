@@ -1,0 +1,6 @@
+framework module SLAliyunManager {
+  umbrella header "SLAliyunManager.h"
+
+  export *
+  module * { export * }
+}
