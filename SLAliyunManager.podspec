@@ -9,7 +9,9 @@
 Pod::Spec.new do |s|
   s.name             = 'SLAliyunManager'
   s.version          = '0.1.6'
-  s.summary          = '阿里云串行上传图片'
+  s.summary          = '阿里云串行上传图片.'
+
+  s.ios.deployment_target = '8.0'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,17 +23,31 @@ Pod::Spec.new do |s|
 阿里云串行上传图片。由于阿里云sdk只提供并行请求的功能，在多图上传时，需要使用串行的办法来减少系统压力，并且在网络不稳定时，可以只针对上传失败的图再次上传，而已上传的图片不用再次上传。
                        DESC
 
-  s.homepage         = 'http://gitlab.adnonstop.com/openSDKs/SLAliyunManager'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'chenjm' => 'chenjm2@adnonstop.com' }
-  s.source           = { :git => 'http://gitlab.adnonstop.com/openSDKs/SLAliyunManager.git', :tag => s.version.to_s }
+
+  if ENV['IS_SOURCE']
+
+    s.homepage         = 'http://gitlab.adnonstop.com/SLLibraries/SLAliyunManager'
+    s.source           = { :git => 'http://gitlab.adnonstop.com/SLLibraries/SLAliyunManager.git', :tag => s.version.to_s }
+
+    s.source_files = 'SLAliyunManager/Classes/**/*'
+
+  else
+
+    s.homepage         = 'http://gitlab.adnonstop.com/openSDKs/SLAliyunManager'
+    s.source           = { :git => 'http://gitlab.adnonstop.com/openSDKs/SLAliyunManager.git', :tag => s.version.to_s }
+
+    s.ios.vendored_frameworks = 'SLAliyunManager/Assets/**/*.framework'
+  end
+
+
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
 
-  s.source_files = 'SLAliyunManager/Classes/**/*'
-  s.ios.vendored_frameworks = 'SLAliyunManager/Assets/*.framework'
+
+  
   # s.resource_bundles = {
   #   'SLAliyunManager' => ['SLAliyunManager/Assets/*.png']
   # }
