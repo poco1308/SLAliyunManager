@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "SLAliyunObject.h"
 
 typedef NS_ENUM(NSInteger, SLAliyunUploadState) {
