@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SLAliyunManager'
-  s.version          = '0.1.7'
+  s.version          = '0.2.0'
   s.summary          = '阿里云串行上传图片.'
 
   s.ios.deployment_target = '8.0'
@@ -34,6 +34,8 @@ Pod::Spec.new do |s|
 
     s.source_files = 'SLAliyunManager/Classes/**/*'
 
+    s.public_header_files = 'SLAliyunManager/Classes/**/*.h'
+
   else
 
     s.homepage         = 'http://gitlab.adnonstop.com/openSDKs/SLAliyunManager'
@@ -42,18 +44,7 @@ Pod::Spec.new do |s|
     s.ios.vendored_frameworks = 'SLAliyunManager/Assets/**/*.framework'
   end
 
-
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-
-
-  
-  # s.resource_bundles = {
-  #   'SLAliyunManager' => ['SLAliyunManager/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.frameworks = 'UIKit', 'Foundation'
   s.dependency 'AliyunOSSiOS'
   s.dependency 'SLDBManager'
 

@@ -17,6 +17,14 @@ IS_SOURCE=1 pod package SLAliyunManager.podspec --embedded --spec-sources=http:/
 IS_SOURCE=1 pod repo push specs SLAliyunManager.podspec --allow-warnings --sources=http://gitlab.adnonstop.com/SLLibrarySpecrepos/Specrepo.git,https://github.com/CocoaPods/Specs.git --use-libraries
 ```
 
+## 版本0.2.0
+
+开启crc64校验功能，防止上传出现坏图
+
+## 版本0.1.8
+
+上传资源超时设置为60s
+
 ## 版本0.1.7
 
 修改导入framework编译出错的bug
@@ -49,7 +57,7 @@ SLAliyunManager is available through [CocoaPods](http://cocoapods.org). To insta
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'SLAliyunManager'
+pod "SLAliyunManager"
 ```
 
 ## Author
