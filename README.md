@@ -17,6 +17,10 @@ IS_SOURCE=1 pod package SLAliyunManager.podspec --embedded --spec-sources=http:/
 IS_SOURCE=1 pod repo push specs SLAliyunManager.podspec --allow-warnings --sources=http://gitlab.adnonstop.com/SLLibrarySpecrepos/Specrepo.git,https://github.com/CocoaPods/Specs.git --use-libraries
 ```
 
+## 版本0.2.1
+
+开启MD5校验功能，防止上传出现坏图
+
 ## 版本0.2.0
 
 开启crc64校验功能，防止上传出现坏图
