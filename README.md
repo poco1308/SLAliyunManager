@@ -17,6 +17,10 @@ IS_SOURCE=1 pod package SLAliyunManager.podspec --embedded --spec-sources=http:/
 IS_SOURCE=1 pod repo push specs SLAliyunManager.podspec --allow-warnings --sources=http://gitlab.adnonstop.com/SLLibrarySpecrepos/Specrepo.git,https://github.com/CocoaPods/Specs.git --use-libraries
 ```
 
+## 版本0.2.6
+
+对动态数据加锁，防止崩溃
+
 ## 版本0.2.4
 
 上传时设置OSSPutObjectRequest对象conetenttype参数
