@@ -5,16 +5,11 @@
 [![License](https://img.shields.io/cocoapods/l/SLAliyunManager.svg?style=flat)](http://cocoapods.org/pods/SLAliyunManager)
 [![Platform](https://img.shields.io/cocoapods/p/SLAliyunManager.svg?style=flat)](http://cocoapods.org/pods/SLAliyunManager)
 
-## 打包
-
-```shell
-IS_SOURCE=1 pod package SLAliyunManager.podspec --embedded --spec-sources=http://gitlab.adnonstop.com/SLLibrarySpecrepos/Specrepo.git,https://github.com/CocoaPods/Specs.git --verbose --force
-```
 
 ## 推送
 
 ```shell
-IS_SOURCE=1 pod repo push specs SLAliyunManager.podspec --allow-warnings --sources=http://gitlab.adnonstop.com/SLLibrarySpecrepos/Specrepo.git,https://github.com/CocoaPods/Specs.git --use-libraries
+pod repo push specs SLAliyunManager.podspec --allow-warnings --sources=http://gitlab.adnonstop.com/SLLibrarySpecrepos/Specrepo.git,https://github.com/CocoaPods/Specs.git --use-libraries
 ```
 
 ## 版本0.2.7
