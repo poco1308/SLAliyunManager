@@ -10,6 +10,12 @@
 #import <UIKit/UIKit.h>
 #import "SLAliyunObject.h"
 
+@class OSSClient;
+
+
+#define SLALIYUN_DEPRECATED(info) __attribute__((deprecated(info)))
+
+
 typedef NS_ENUM(NSInteger, SLAliyunUploadState) {
     SLAliyunUploadStateDraft = 0,
     SLAliyunUploadStateSuccess = 1,
@@ -34,14 +40,16 @@ extern NSString * _Nonnull const SLAliyunUploadNotification;
 
 
 @interface SLAliyunManager : NSObject
-@property (nonatomic, assign) uint32_t maxRetryCount; // 重试最大次数，默认两次
+@property (nonatomic, assign) uint32_t maxRetryCount; // 重试最大次数，默认3次
 @property (nonatomic, assign) NSTimeInterval timeoutIntervalForRequest; // 请求超时，默认30s
-@property (nonatomic, assign) NSTimeInterval timeoutIntervalForResource; // 单个Object下载的最长持续时间，默认24小时
+@property (nonatomic, assign) NSTimeInterval timeoutIntervalForResource; // 单个Object下载的最长持续时间，默认5分钟
 @property (nonatomic, copy) NSString * _Nonnull endPoint;
 @property (nonatomic, copy) NSString *_Nonnull accessKey;
 @property (nonatomic, copy) NSString *_Nonnull secretKey;
 @property (nonatomic, copy) NSString *_Nonnull token;
 @property (nonatomic, copy) NSString *_Nonnull uploadDirectory;
+@property (nonatomic, strong) OSSClient *client;
+
 
 /**
  * @brief 单例
@@ -49,10 +57,22 @@ extern NSString * _Nonnull const SLAliyunUploadNotification;
 + (SLAliyunManager *_Nonnull)shareInstance;
 
 /**
+ * @brief 签名，区分开 shareInstance
+ */
++ (SLAliyunManager *_Nonnull)signatureShareInstance;
+
+/**
+ * @brief 注册（请使用 + (void)registerWithUserId:(nonnull NSString *)userId;）
+ * @param userId 用户id
+ */
+- (void)registerWithUserId:(nonnull NSString *)userId SLALIYUN_DEPRECATED("请替换为 + (void)registerWithUserId:");
+
+/**
  * @brief 注册
  * @param userId 用户id
  */
-- (void)registerWithUserId:(nonnull NSString *)userId;
++ (void)registerWithUserId:(nonnull NSString *)userId;
+
 
 /**
  * @brief 上传图组
