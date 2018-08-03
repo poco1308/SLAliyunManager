@@ -27,18 +27,9 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'chenjm' => 'chenjm2@adnonstop.com' }
 
-    if ENV['IS_SOURCE']
-    s.homepage         = 'http://gitlab.adnonstop.com/SLLibraries/SLAliyunManager'
-    s.source           = { :git => 'http://gitlab.adnonstop.com/SLLibraries/SLAliyunManager.git', :tag => s.version.to_s }
-
-    s.source_files = 'SLAliyunManager/Classes/**/*'
-
-    s.public_header_files = 'SLAliyunManager/Classes/**/*.h'
-    else
-    s.homepage         = 'http://gitlab.adnonstop.com/openSDKs/SLAliyunManager'
-    s.source           = { :git => 'http://gitlab.adnonstop.com/openSDKs/SLAliyunManager.git', :tag => s.version.to_s }
-    s.ios.vendored_frameworks = 'SLAliyunManager/Assets/**/*.framework'
-    end
+  s.homepage         = 'http://gitlab.adnonstop.com/openSDKs/SLAliyunManager'
+  s.source           = { :git => 'http://gitlab.adnonstop.com/openSDKs/SLAliyunManager.git', :tag => s.version.to_s }
+  s.ios.vendored_frameworks = 'SLAliyunManager/Assets/**/*.framework'
 
   s.frameworks = 'UIKit', 'Foundation'
   s.dependency 'AliyunOSSiOS'
