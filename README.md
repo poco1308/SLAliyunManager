@@ -11,6 +11,9 @@
 ```shell
 pod repo push specs SLAliyunManager.podspec --allow-warnings --sources=http://gitlab.adnonstop.com/SLLibrarySpecrepos/Specrepo.git,https://github.com/CocoaPods/Specs.git --use-libraries
 ```
+## 版本0.2.8
+
+修复链接阿里云错误的问题
 
 ## 版本0.2.7
 
