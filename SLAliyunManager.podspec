@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SLAliyunManager'
-  s.version          = '0.2.9'
+  s.version          = '0.2.11'
   s.summary          = '阿里云串行上传图片.'
 
   s.ios.deployment_target = '8.0'
